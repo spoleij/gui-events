@@ -66,15 +66,10 @@ countLabel.configure(textvariable=intVar,bg="white", fg="black", font=("Arial", 
 countLabel.bind("<Enter>", onLabelEnter)
 countLabel.bind("<Leave>", onLabelLeave)
 countLabel.bind("<Double-Button>", tripleLabel)
+
 countLabel.pack(options)
 
 button2 = tkinter.Button(text='down', bg="white", fg="black", font=("Arial", 10), command=subtractOne)                      
 button2.pack(options)
-
-window.bind("<Up>", lambda event: addOne())
-window.bind("+", lambda event: addOne())
-window.bind("<Down>", lambda event: subtractOne())
-window.bind("-", lambda event: subtractOne())
-window.bind("<space>", tripleLabel)
 
 window.mainloop()
